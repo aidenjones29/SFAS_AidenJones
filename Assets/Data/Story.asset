@@ -26,16 +26,13 @@ MonoBehaviour:
       _beatId: 4
     - _text: No... ill clean
       _beatId: 3
-    _text: 'Are you sure you want to do this?
-
-
-      THE END'
+    _text: Are you sure you want to do this?
     _id: 2
   - _choices: []
     _text: 'You chose wisely. Your family will be happy.
 
 
-      THE END.'
+      GOODBYE.'
     _id: 3
   - _choices: []
     _text: Lets do this...

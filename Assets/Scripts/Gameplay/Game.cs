@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEditor.SceneManagement;
 
 public class Game : MonoBehaviour
 {
@@ -28,6 +29,11 @@ public class Game : MonoBehaviour
             {
                 UpdateInput();
             }
+        }
+
+        if(_currentBeat.ID == 4)
+        {
+            //SceneManager.LoadScene("MainGame");
         }
     }
 
