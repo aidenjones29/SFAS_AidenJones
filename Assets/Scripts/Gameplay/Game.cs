@@ -33,7 +33,7 @@ public class Game : MonoBehaviour
 
         if(_currentBeat.ID == 4)
         {
-            //SceneManager.LoadScene("MainGame");
+            Application.LoadLevel("MainGame");
         }
     }
 
