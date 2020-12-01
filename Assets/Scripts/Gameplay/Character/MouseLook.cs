@@ -8,8 +8,9 @@ public class MouseLook : MonoBehaviour
     private float mouseSensitivity = 100.0f;
 
     [SerializeField]
-    private Transform player;
+    private Transform playerBody;
 
+    private float xRotation = 0.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,9 @@ public class MouseLook : MonoBehaviour
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
-        player.Rotate(Vector3.up * mouseX);
+        xRotation -= mouseY;
+
+        playerBody.Rotate(Vector3.up * mouseX);
+        transform.localRotation = Quaternion.Euler(xRotation, 0.0f, 0.0f);
     }
 }

@@ -186,7 +186,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 280059765}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0.7071068, w: 0}
-  m_LocalPosition: {x: 20.11935, y: 10, z: 32}
+  m_LocalPosition: {x: 20.11935, y: 10, z: 32.64}
   m_LocalScale: {x: 5.4446, y: 5.4445996, z: 2.459108}
   m_Children: []
   m_Father: {fileID: 136832946}
@@ -225,7 +225,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4a0f025d831bfe048a69b45522bef9d1, type: 2}
+  - {fileID: 2100000, guid: 3900be9ff82ecf74982c42070adfea0f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -321,7 +321,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4a0f025d831bfe048a69b45522bef9d1, type: 2}
+  - {fileID: 2100000, guid: 3900be9ff82ecf74982c42070adfea0f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -509,7 +509,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4a0f025d831bfe048a69b45522bef9d1, type: 2}
+  - {fileID: 2100000, guid: 3900be9ff82ecf74982c42070adfea0f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -757,7 +757,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459459654}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.37, y: 0, z: 56.17}
+  m_LocalPosition: {x: 20.37, y: 0, z: 58.7}
   m_LocalScale: {x: 57.890312, y: 0.5789031, z: 57.890312}
   m_Children: []
   m_Father: {fileID: 136832946}
@@ -891,7 +891,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4a0f025d831bfe048a69b45522bef9d1, type: 2}
+  - {fileID: 2100000, guid: 3900be9ff82ecf74982c42070adfea0f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1183,5 +1183,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f86f9189286c19d488e2f79eeda9bb98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 100
-  player: {fileID: 1404654467}
+  mouseSensitivity: 250
+  playerBody: {fileID: 1404654467}
