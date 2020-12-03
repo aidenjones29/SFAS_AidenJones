@@ -1,20 +1,26 @@
 ﻿using System.Collections;
+using UnityEngine.SceneManagement;
 using UnityEngine;
-using UnityEditor.SceneManagement;
 
 public class Game : MonoBehaviour
 {
     [SerializeField] private StoryData _data;
+    [SerializeField] private GameObject backgroundCamera;
 
     private TextDisplay _output;
     private BeatData _currentBeat;
     private WaitForSeconds _wait;
+
+    private Animation camAnimation;
+    private bool gameStarted = false;
+    private float gameStartedTime = 1.0f;
 
     private void Awake()
     {
         _output = GetComponentInChildren<TextDisplay>();
         _currentBeat = null;
         _wait = new WaitForSeconds(0.5f);
+        camAnimation = backgroundCamera.GetComponent<Animation>();
     }
 
     private void Update()
@@ -33,9 +39,20 @@ public class Game : MonoBehaviour
 
         if(_currentBeat.ID == 4)
         {
-            Application.LoadLevel("MainGame");
+            camAnimation.Play();
+            gameStarted = true;
+        }
+
+        if (gameStarted == true && gameStartedTime <= 0.0f)
+        {
+            SceneManager.LoadScene("MainGame");
+        }
+        else if (gameStarted == true && gameStartedTime >= 0.0f)
+        {
+            gameStartedTime -= Time.deltaTime;
         }
     }
+
 
     private void UpdateInput()
     {
