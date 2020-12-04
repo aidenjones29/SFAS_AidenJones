@@ -6,12 +6,14 @@ public class Game : MonoBehaviour
 {
     [SerializeField] private StoryData _data;
     [SerializeField] private GameObject backgroundCamera;
+    [SerializeField] private GameObject laptopHinge;
 
     private TextDisplay _output;
     private BeatData _currentBeat;
     private WaitForSeconds _wait;
 
     private Animation camAnimation;
+    private Animation LaptopCloseAnimation;
     private bool gameStarted = false;
     private float gameStartedTime = 1.0f;
 
@@ -21,6 +23,7 @@ public class Game : MonoBehaviour
         _currentBeat = null;
         _wait = new WaitForSeconds(0.5f);
         camAnimation = backgroundCamera.GetComponent<Animation>();
+        LaptopCloseAnimation = laptopHinge.GetComponent<Animation>();
     }
 
     private void Update()
@@ -39,20 +42,38 @@ public class Game : MonoBehaviour
 
         if(_currentBeat.ID == 4)
         {
-            camAnimation.Play();
-            gameStarted = true;
+            StartCoroutine(AnimPause(camAnimation));
         }
-
-        if (gameStarted == true && gameStartedTime <= 0.0f)
+        else if(_currentBeat.ID == 3)
         {
-            SceneManager.LoadScene("MainGame");
-        }
-        else if (gameStarted == true && gameStartedTime >= 0.0f)
-        {
-            gameStartedTime -= Time.deltaTime;
+            StartCoroutine("Quit");
         }
     }
 
+    IEnumerator Quit()
+    {
+        yield return new WaitForSeconds(4);
+        LaptopCloseAnimation.Play();
+        StartCoroutine("CloseAnim");
+    }
+
+    IEnumerator CloseAnim()
+    {
+        yield return new WaitForSeconds(1);
+        Application.Quit();
+        //UnityEditor.EditorApplication.isPlaying = false;
+    }
+
+    IEnumerator AnimPause(Animation anim)
+    {
+        anim.Play();
+        yield return new WaitForSeconds(1);
+
+        if( anim == camAnimation)
+        {
+            SceneManager.LoadSceneAsync("MainGame");
+        }
+    }
 
     private void UpdateInput()
     {
