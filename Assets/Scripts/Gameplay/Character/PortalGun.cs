@@ -42,6 +42,7 @@ public class PortalGun : MonoBehaviour
                     portalObjects[(int)currentPortal].SetActive(true);
                     portalObjects[(int)currentPortal].transform.position = hit.point;
                     portalObjects[(int)currentPortal].transform.rotation = hit.transform.rotation;
+                    float currentRotation = (int)currentPortalDirection + (Mathf.Round(transform.eulerAngles.z));
                     portalObjects[(int)currentPortal].transform.Rotate(90.0f, 0.0f, (int)currentPortalDirection);
 
                     if (currentPortal == Portals.Green) currentPortal = Portals.Red;

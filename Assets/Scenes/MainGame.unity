@@ -1614,13 +1614,11 @@ GameObject:
   - component: {fileID: 1404654467}
   - component: {fileID: 1404654466}
   - component: {fileID: 1404654465}
-  - component: {fileID: 1404654464}
-  - component: {fileID: 1404654469}
   - component: {fileID: 1404654463}
   - component: {fileID: 1404654468}
   m_Layer: 0
   m_Name: PlayerBody
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1640,20 +1638,8 @@ MonoBehaviour:
   controller: {fileID: 1404654468}
   playerSpeed: 12
   playerGravity: -200
---- !u!136 &1404654464
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1404654462}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  greenTeleport: {fileID: 2015521238661406674}
+  redTeleport: {fileID: 2806827878299020261}
 --- !u!23 &1404654465
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1737,20 +1723,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &1404654469
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1404654462}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.22047949
-  m_Height: 1.5150757
-  m_Direction: 2
-  m_Center: {x: 0.63, y: 0, z: 0.48815918}
 --- !u!1 &1459459654
 GameObject:
   m_ObjectHideFlags: 0
@@ -3241,6 +3213,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Portal
       objectReference: {fileID: 0}
+    - target: {fileID: 2015521238787322852, guid: 84e5e9fdd7aebac48ba4080bec46d764, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2015521238787322855, guid: 84e5e9fdd7aebac48ba4080bec46d764, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.019921
@@ -3285,8 +3261,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3194817731002870285, guid: 84e5e9fdd7aebac48ba4080bec46d764, type: 3}
+      propertyPath: m_Name
+      value: GreenteleportHere
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048638477288100635, guid: 84e5e9fdd7aebac48ba4080bec46d764, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5197068109333126095, guid: 84e5e9fdd7aebac48ba4080bec46d764, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5197068109333126095, guid: 84e5e9fdd7aebac48ba4080bec46d764, type: 3}
+      propertyPath: m_TagString
+      value: Portal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421444289277250439, guid: 84e5e9fdd7aebac48ba4080bec46d764, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910956594435766884, guid: 84e5e9fdd7aebac48ba4080bec46d764, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656505368642262853, guid: 84e5e9fdd7aebac48ba4080bec46d764, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84e5e9fdd7aebac48ba4080bec46d764, type: 3}
+--- !u!1 &2015521238661406674 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3194817731002870285, guid: 84e5e9fdd7aebac48ba4080bec46d764, type: 3}
+  m_PrefabInstance: {fileID: 2015521238661406673}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2806827878299020259
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3350,10 +3359,43 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 728976540146774331, guid: ed584cf372b885f41b89d0858347b996, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 773084731405051308, guid: ed584cf372b885f41b89d0858347b996, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1550392615198622580, guid: ed584cf372b885f41b89d0858347b996, type: 3}
+      propertyPath: m_Name
+      value: RedTeleportHere
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117899549956791072, guid: ed584cf372b885f41b89d0858347b996, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5975474445719041537, guid: ed584cf372b885f41b89d0858347b996, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8591683552531093418, guid: ed584cf372b885f41b89d0858347b996, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8591683552531093418, guid: ed584cf372b885f41b89d0858347b996, type: 3}
+      propertyPath: m_TagString
+      value: Portal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed584cf372b885f41b89d0858347b996, type: 3}
 --- !u!1 &2806827878299020260 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 728976540146774331, guid: ed584cf372b885f41b89d0858347b996, type: 3}
+  m_PrefabInstance: {fileID: 2806827878299020259}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2806827878299020261 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1550392615198622580, guid: ed584cf372b885f41b89d0858347b996, type: 3}
   m_PrefabInstance: {fileID: 2806827878299020259}
   m_PrefabAsset: {fileID: 0}

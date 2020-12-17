@@ -12,6 +12,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float playerGravity;
 
+    [SerializeField]
+    private GameObject greenTeleport;
+    [SerializeField]
+    private GameObject redTeleport;
+
     // Update is called once per frame
     void Update()
     {
@@ -23,6 +28,20 @@ public class PlayerMovement : MonoBehaviour
             Vector3 move = transform.right * moveX + transform.forward * moveZ + transform.up * (playerGravity * Time.deltaTime);
 
             controller.Move(move * playerSpeed * Time.deltaTime);
+        }
+    }
+
+    void OnTriggerEnter(Collider collision)
+    {
+        if(collision.gameObject.name == "PortalGreen")
+        {
+            transform.position = redTeleport.transform.position;
+            transform.rotation = redTeleport.transform.rotation;
+        }
+        else if (collision.gameObject.name == "PortalRed")
+        {
+            transform.position = greenTeleport.transform.position;
+            transform.rotation = greenTeleport.transform.rotation;
         }
     }
 }
