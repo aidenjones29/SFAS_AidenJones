@@ -3201,6 +3201,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2006061402586684567, guid: 84e5e9fdd7aebac48ba4080bec46d764, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2015521238787322852, guid: 84e5e9fdd7aebac48ba4080bec46d764, type: 3}
       propertyPath: m_Name
       value: GreenPortal
@@ -3303,6 +3307,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 159115384332827515, guid: ed584cf372b885f41b89d0858347b996, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 526624995988634447, guid: ed584cf372b885f41b89d0858347b996, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider collision)
+    void OnControllerColliderHit(ControllerColliderHit collision)
     {
         if(collision.gameObject.name == "PortalGreen")
         {

@@ -138,7 +138,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1550392615198622580}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 526624995988634447}
@@ -326,7 +326,7 @@ GameObject:
   - component: {fileID: 7718211482977961857}
   - component: {fileID: 5085545713397018665}
   - component: {fileID: 4649524578104290970}
-  - component: {fileID: 159115384332827515}
+  - component: {fileID: 2729782584917608436}
   m_Layer: 0
   m_Name: PortalRed
   m_TagString: Portal
@@ -409,12 +409,12 @@ MeshCollider:
   m_GameObject: {fileID: 8591683552531093418}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &159115384332827515
+--- !u!65 &2729782584917608436
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -422,8 +422,8 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8591683552531093418}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9.999989, y: 0.33535132, z: 10.000005}
-  m_Center: {x: 0, y: -0.02357603, z: 1.1017516e-18}
+  m_Size: {x: 9.999989, y: 0.7916906, z: 10.000005}
+  m_Center: {x: 0, y: 0.059551578, z: 3.984571e-16}

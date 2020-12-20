@@ -56,7 +56,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3194817731002870285}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2015521238787322855}
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 6068850301389982692}
   - component: {fileID: 8770487197354392652}
   - component: {fileID: 9196938380070085375}
-  - component: {fileID: 2006061402586684567}
+  - component: {fileID: 6493279226084174911}
   m_Layer: 0
   m_Name: PortalGreen
   m_TagString: Untagged
@@ -240,12 +240,12 @@ MeshCollider:
   m_GameObject: {fileID: 5197068109333126095}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &2006061402586684567
+--- !u!65 &6493279226084174911
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -253,11 +253,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5197068109333126095}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9.854142, y: 0.9892942, z: 10.000003}
-  m_Center: {x: 0.072919376, y: 0.23958537, z: 1.5778413e-15}
+  m_Size: {x: 11.057045, y: 2.5205965, z: 10.000003}
+  m_Center: {x: 0.18612432, y: 0.0869492, z: 8.085374e-17}
 --- !u!1 &7421444289277250439
 GameObject:
   m_ObjectHideFlags: 0
