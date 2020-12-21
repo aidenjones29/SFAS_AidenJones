@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     private GameObject greenTeleport;
     [SerializeField]
     private GameObject redTeleport;
+    [SerializeField]
+    private GameObject PauseManager;
 
     // Update is called once per frame
     void Update()
@@ -42,6 +44,10 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.position = greenTeleport.transform.position;
             transform.rotation = greenTeleport.transform.rotation;
+        }
+        else if(collision.gameObject.name == "ExitDoor")
+        {
+            PauseManager.GetComponent<PauseMenu>().gamePause();
         }
     }
 }

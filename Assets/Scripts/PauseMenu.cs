@@ -38,23 +38,7 @@ public class PauseMenu : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.P))
         {
-            GlobalVariables.menuActive = !GlobalVariables.menuActive;
-
-            if(GlobalVariables.menuActive)
-            {
-                gameCamera.enabled = false;
-                laptopCamera.enabled = true;
-                gameUI.SetActive(false);
-                UnityEngine.Cursor.lockState = CursorLockMode.None;
-                camAnimation.clip = camMoveAnimOut;
-                camAnimation.Play();
-            }
-            else
-            {
-                camAnimation.clip = camMoveAnimIn;
-                camAnimation.Play();
-                gameResumed = true;
-            }
+            gamePause();
         }
 
         if(gameResumed == true && gameResumeTime <= 0.0f)
@@ -68,6 +52,28 @@ public class PauseMenu : MonoBehaviour
         else if(gameResumed == true && gameResumeTime >= 0.0f)
         {
             gameResumeTime -= Time.deltaTime;
+        }
+    }
+
+
+    public void gamePause()
+    {
+        GlobalVariables.menuActive = !GlobalVariables.menuActive;
+
+        if (GlobalVariables.menuActive)
+        {
+            gameCamera.enabled = false;
+            laptopCamera.enabled = true;
+            gameUI.SetActive(false);
+            UnityEngine.Cursor.lockState = CursorLockMode.None;
+            camAnimation.clip = camMoveAnimOut;
+            camAnimation.Play();
+        }
+        else
+        {
+            camAnimation.clip = camMoveAnimIn;
+            camAnimation.Play();
+            gameResumed = true;
         }
     }
 }

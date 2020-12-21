@@ -6,6 +6,7 @@ public class PortalGun : MonoBehaviour
 {
     [SerializeField] private GameObject crosshair;
     [SerializeField] private GameObject[] portalObjects;
+    [SerializeField] private AudioClip portalSound;
 
     private enum portalDirection {eDown = 0, eLeft = -90, eUp = 180, eRight = 90};
     private enum Portals { Green, Red };
@@ -39,6 +40,7 @@ public class PortalGun : MonoBehaviour
             {
                 if(hit.transform.tag != "Portal")
                 {
+                    SoundManager.playSoundEffect(portalSound);
                     portalObjects[(int)currentPortal].SetActive(true);
                     portalObjects[(int)currentPortal].transform.position = hit.point;
                     portalObjects[(int)currentPortal].transform.rotation = hit.transform.rotation;
