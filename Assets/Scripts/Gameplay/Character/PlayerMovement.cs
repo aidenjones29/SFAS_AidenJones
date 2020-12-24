@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -49,5 +50,11 @@ public class PlayerMovement : MonoBehaviour
         {
             PauseManager.GetComponent<PauseMenu>().gamePause();
         }
+    }
+
+    IEnumerator NextLevelLoad()
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("Demo");
     }
 }
