@@ -31,6 +31,7 @@ public class PauseMenu : MonoBehaviour
     {
         camAnimation = laptopCamera.GetComponent<Animation>();
         laptopCamera.enabled = false;
+        GlobalVariables.menuActive = false;
     }
 
     // Update is called once per frame

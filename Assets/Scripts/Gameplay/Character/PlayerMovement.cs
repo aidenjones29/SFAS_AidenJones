@@ -20,6 +20,16 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private GameObject PauseManager;
 
+    bool animPlaying = false;
+
+    private void Start()
+    {
+        if (SceneManager.GetActiveScene().name == "Demo")
+        {
+            animPlaying = true;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -36,19 +46,22 @@ public class PlayerMovement : MonoBehaviour
 
     void OnControllerColliderHit(ControllerColliderHit collision)
     {
-        if(collision.gameObject.name == "PortalGreen")
+        if(SceneManager.GetActiveScene().name == "MainGame")
         {
-            transform.position = redTeleport.transform.position;
-            transform.rotation = redTeleport.transform.rotation;
-        }
-        else if (collision.gameObject.name == "PortalRed")
-        {
-            transform.position = greenTeleport.transform.position;
-            transform.rotation = greenTeleport.transform.rotation;
-        }
-        else if(collision.gameObject.name == "ExitDoor")
-        {
-            PauseManager.GetComponent<PauseMenu>().gamePause();
+            if(collision.gameObject.name == "PortalGreen")
+            {
+                transform.position = redTeleport.transform.position;
+                transform.rotation = redTeleport.transform.rotation;
+            }
+            else if (collision.gameObject.name == "PortalRed")
+            {
+                transform.position = greenTeleport.transform.position;
+                transform.rotation = greenTeleport.transform.rotation;
+            }
+            else if(collision.gameObject.name == "ExitDoor")
+            {
+                StartCoroutine(NextLevelLoad());
+            }
         }
     }
 

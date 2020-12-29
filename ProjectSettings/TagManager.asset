@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Portal
+  - InteractRaycast
+  - Bin
+  - Pickup
   layers:
   - Default
   - TransparentFX
@@ -17,7 +20,7 @@ TagManager:
   - Background
   - Ground
   - Portal
-  - 
+  - InteractRaycast
   - 
   - 
   - 
