@@ -129,8 +129,7 @@ public class Game : MonoBehaviour
     IEnumerator CloseAnim()
     {
         yield return new WaitForSeconds(1);
-        Application.Quit();
-        //UnityEditor.EditorApplication.isPlaying = false;
+        SceneManager.LoadScene("HouseClean");
     }
 
     IEnumerator AnimPause(Animation anim)

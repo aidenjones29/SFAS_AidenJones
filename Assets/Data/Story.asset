@@ -26,7 +26,8 @@ MonoBehaviour:
       _beatId: 4
     - _text: No... ill clean
       _beatId: 3
-    _text: Are you sure you want to do this?
+    _text: Are you sure you want to do this?  (This is a skippable minigame and will
+      not effect gameplay)
     _id: 2
   - _choices: []
     _text: 'You chose wisely. Your family will be happy.
