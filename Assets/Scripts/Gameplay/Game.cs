@@ -4,20 +4,9 @@ using UnityEngine;
 
 public class Game : MonoBehaviour
 {
-    private enum phoneMenus {Play, Controls, Quit}
-    private phoneMenus currentPhoneSelection = phoneMenus.Play;
-
     [SerializeField] private StoryData _data;
     [SerializeField] private GameObject backgroundCamera;
     [SerializeField] private GameObject laptopHinge;
-    [SerializeField] private GameObject PhoneThumb;
-    [SerializeField] private GameObject ArmObject;
-    [SerializeField] private GameObject PhoneObject;
-
-    [SerializeField]private AnimationClip[] PhoneMovements;
-
-    [SerializeField] private Material[] phoneScreens;
-    private  Material[] phoneMats = new Material[7];
 
     private TextDisplay _output;
     private BeatData _currentBeat;
@@ -25,13 +14,6 @@ public class Game : MonoBehaviour
 
     private Animation camAnimation;
     private Animation LaptopCloseAnimation;
-    private Animation ThumbAnimation;
-    private Animation ArmAnimation;
-
-    private float gameStartedTime = 1.0f;
-    private bool gameStarted = false;
-    private bool phoneActive = true;
-    private bool controlsActive = false;
 
     private void Awake()
     {
@@ -39,39 +21,12 @@ public class Game : MonoBehaviour
         _currentBeat = null;
         _wait = new WaitForSeconds(0.5f);
         camAnimation = backgroundCamera.GetComponent<Animation>();
-        ThumbAnimation = PhoneThumb.GetComponent<Animation>();
         LaptopCloseAnimation = laptopHinge.GetComponent<Animation>();
-        ArmAnimation = ArmObject.GetComponent<Animation>();
-        phoneMats = PhoneObject.GetComponent<MeshRenderer>().materials;
     }
 
     private void Update()
     {
-        if(phoneActive == true)
-        {
-            if(Input.GetKeyDown(KeyCode.DownArrow))
-            {
-                ThumbAnimation.clip = PhoneMovements[(int)currentPhoneSelection];
-                ThumbAnimation.Play();
-                currentPhoneSelection++;
-                if ((int)currentPhoneSelection == PhoneMovements.Length) currentPhoneSelection = 0;
-            }
-            if(Input.GetKeyDown(KeyCode.Return))
-            {
-                phoneMenuSelection(currentPhoneSelection);
-            }
-        }
-        else if (controlsActive == true)
-        {
-            if (Input.GetKeyDown(KeyCode.Return))
-            {
-                phoneActive = true;
-                controlsActive = false;
-                phoneMats[0] = phoneScreens[0];
-                PhoneObject.GetComponent<MeshRenderer>().materials = phoneMats;
-            }
-        }
-        else
+        if(GlobalVariables.gamePaused == false)
         {
             if(_output.IsIdle)
             {
@@ -94,29 +49,6 @@ public class Game : MonoBehaviour
                 StartCoroutine("Quit");
             }
         }
-    }
-
-
-    void phoneMenuSelection(phoneMenus phoneMenu)
-    {
-        switch (phoneMenu)
-        {
-            case phoneMenus.Play:
-                StartCoroutine(AnimPause(ArmAnimation));
-                phoneActive = false;
-                break;
-            case phoneMenus.Controls:
-                phoneActive = false;
-                controlsActive = true;
-                phoneMats[0] = phoneScreens[1];
-                PhoneObject.GetComponent<MeshRenderer>().materials = phoneMats;
-                break;
-            case phoneMenus.Quit:
-                StartCoroutine(AnimPause(ArmAnimation));
-                StartCoroutine(Quit());
-                break;
-        }
-
     }
 
     IEnumerator Quit()
