@@ -8,6 +8,8 @@ TagManager:
   - InteractRaycast
   - Bin
   - Pickup
+  - SpawnArea
+  - Building
   layers:
   - Default
   - TransparentFX
