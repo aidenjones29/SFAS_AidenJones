@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3189446977498192062}
   - component: {fileID: 86489780667728543}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PaperScrunched
   m_TagString: Paper
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 2608434184535157222}
   - component: {fileID: 928913938816831660}
   - component: {fileID: 4449996714588582968}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
