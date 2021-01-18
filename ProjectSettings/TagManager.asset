@@ -15,6 +15,7 @@ TagManager:
   - Paper
   - Clothes
   - BinBag
+  - DropOff
   layers:
   - Default
   - TransparentFX

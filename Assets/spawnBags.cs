@@ -16,7 +16,9 @@ public class spawnBags : MonoBehaviour
         
         for (int i = 0; i < RubbishAmount; i++)
         {
-            GameObject rubbishSpawn = Instantiate(Rubbish, gameObject.transform);
+            GameObject rubbishSpawn = Instantiate(Rubbish, gameObject.transform) as GameObject;
+            rubbishSpawn.name = rubbishSpawn.name.Replace("(Clone)", "");
+            //GameObject rubbishSpawn = Instantiate(Rubbish, gameObject.transform);
             moveObject(AreaScale, rubbishSpawn);
         }
     }
