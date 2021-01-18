@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 203308083862193725}
   m_Layer: 12
   m_Name: Socks
-  m_TagString: Clothes
+  m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,8 +125,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 14.851709, y: 0.99999875, z: 14.4744625}
-  m_Center: {x: 0.26607582, y: 9.759999, z: 0.29606825}
+  m_Size: {x: 14.851709, y: 2.2567298, z: 14.4744625}
+  m_Center: {x: 0.26607582, y: 10.388361, z: 0.29606825}
 --- !u!1 &5387241135828971639
 GameObject:
   m_ObjectHideFlags: 0

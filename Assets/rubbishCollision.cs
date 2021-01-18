@@ -18,7 +18,7 @@ public class rubbishCollision : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Building") //|| collision.gameObject.tag == "Pickup")
+        if(collision.gameObject.tag == "Building")
         {
             gameObject.GetComponentInParent<spawnBags>().moveObject(gameObject.GetComponentInParent<spawnBags>().AreaScale, gameObject);
         }

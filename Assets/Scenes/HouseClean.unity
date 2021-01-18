@@ -3403,7 +3403,7 @@ GameObject:
   - component: {fileID: 1032503640}
   - component: {fileID: 1032503644}
   - component: {fileID: 1032503643}
-  m_Layer: 11
+  m_Layer: 2
   m_Name: TextureCam
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -4459,7 +4459,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1553119898}
-  m_Layer: 12
+  m_Layer: 2
   m_Name: Pickup Place
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4474,7 +4474,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1553119897}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.886, z: 1.08}
+  m_LocalPosition: {x: -0.89, y: -0.886, z: 1.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1568667124}
@@ -4493,7 +4493,8 @@ GameObject:
   - component: {fileID: 1568667127}
   - component: {fileID: 1568667126}
   - component: {fileID: 1568667125}
-  m_Layer: 12
+  - component: {fileID: 1568667129}
+  m_Layer: 2
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -4508,7 +4509,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1568667123}
   m_LocalRotation: {x: 0.16636597, y: -0, z: -0, w: 0.9860641}
-  m_LocalPosition: {x: 0.121, y: 0.796, z: -0.1559999}
+  m_LocalPosition: {x: 0.121, y: 0.708, z: 0.208}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1553119898}
@@ -4597,6 +4598,19 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1568667129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568667123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9883c10e3f154a44bf5cc70ba40fe32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PickupObject: {fileID: 1553119897}
 --- !u!1 &1578276153
 GameObject:
   m_ObjectHideFlags: 0
@@ -5017,7 +5031,6 @@ GameObject:
   - component: {fileID: 1861532194}
   - component: {fileID: 1861532193}
   - component: {fileID: 1861532192}
-  - component: {fileID: 1861532197}
   m_Layer: 2
   m_Name: Player
   m_TagString: Player
@@ -5037,7 +5050,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 8
-  m_Radius: 0.5
+  m_Radius: 0.07
   m_SlopeLimit: 45
   m_StepOffset: 0.7
   m_SkinWidth: 0.08
@@ -5126,20 +5139,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &1861532197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1861532191}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9883c10e3f154a44bf5cc70ba40fe32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MainCamera: {fileID: 0}
-  PickupObject: {fileID: 1553119897}
 --- !u!1 &1877145285
 GameObject:
   m_ObjectHideFlags: 0

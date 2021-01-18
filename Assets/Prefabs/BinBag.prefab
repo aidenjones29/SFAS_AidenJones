@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2813558195566443046}
   m_Layer: 12
   m_Name: BinBag
-  m_TagString: BinBag
+  m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 833147906356102702}
   m_Layer: 12
   m_Name: trashbag
-  m_TagString: Pickup
+  m_TagString: BinBag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 8112272652999471915}
   m_Layer: 12
   m_Name: trashbag_tide
-  m_TagString: Untagged
+  m_TagString: BinBag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
