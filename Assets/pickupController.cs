@@ -11,6 +11,7 @@ public class pickupController : MonoBehaviour
 
     private float interactDistance = 100.0f;
     private bool holdingItem = false;
+    private string objectHolding = "";
 
     // Start is called before the first frame update
     void Start()
@@ -30,13 +31,15 @@ public class pickupController : MonoBehaviour
 
                 if (Physics.Raycast(forwardRay, out hit, interactDistance))
                 {
+                    Debug.DrawRay(transform.position, transform.forward * 100, Color.green, 5.0f);
                     if (hit.transform.tag == "Pickup")
                     {
+                        objectHolding = hit.transform.name;
                         hit.transform.SetParent(gameObject.transform, false);
                         hit.transform.localPosition = PickupObject.transform.localPosition;
                         holdingItem = true;
 
-                        switch (hit.transform.name)
+                        switch (objectHolding)
                         {
                             case "BinBag":
                                 BinBagDropOff.SetActive(true);
@@ -58,11 +61,30 @@ public class pickupController : MonoBehaviour
 
                 if (Physics.Raycast(forwardRay, out hit, interactDistance))
                 {
+                    Debug.DrawRay(transform.position, transform.forward * 100, Color.green, 5.0f);
                     if (hit.transform.tag == "DropOff")
                     {
                         GameObject childObject = this.gameObject.transform.GetChild(0).GetChild(0).gameObject;
-                        Object.Destroy(childObject);
+
+                        switch (objectHolding)
+                        {
+                            case "BinBag":
+                                BinBagDropOff.SetActive(false);
+                                break;
+                            case "Paper":
+                                PaperDropOff.SetActive(false);
+                                break;
+                            case "Socks":
+                                SockDropOff.SetActive(false);
+                                break;
+                        }
+
+                        foreach (Transform child in transform)
+                        {
+                            Destroy(child.gameObject);
+                        }
                         holdingItem = false;
+                        objectHolding = "";
                     }
                 }
             }

@@ -547,7 +547,7 @@ GameObject:
   m_Component:
   - component: {fileID: 82696951}
   - component: {fileID: 82696952}
-  m_Layer: 2
+  m_Layer: 12
   m_Name: ArrowAnimation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -585,6 +585,142 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!1 &122987334
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 122987335}
+  - component: {fileID: 122987337}
+  - component: {fileID: 122987336}
+  m_Layer: 5
+  m_Name: TrashScoreValue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &122987335
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122987334}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 737076982}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -570.9, y: 438}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &122987336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122987334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: '0%
+
+'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: -129.43893, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &122987337
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122987334}
+  m_CullTransparentMesh: 0
 --- !u!1 &124679923
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,7 +832,7 @@ GameObject:
   m_Component:
   - component: {fileID: 124852445}
   - component: {fileID: 124852446}
-  m_Layer: 2
+  m_Layer: 12
   m_Name: ArrowAnimation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1392,7 +1528,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fafdc40bacf38e74dae121147c64e72a, type: 3}
       propertyPath: m_Layer
-      value: 2
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fafdc40bacf38e74dae121147c64e72a, type: 3}
@@ -1435,7 +1571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rubbish: {fileID: 2812745959527236100, guid: bf3f9abab591d5946b438dbb350f9ea9, type: 3}
   AreaScale: 5
-  RubbishAmount: 5
+  RubbishAmount: 10
 --- !u!64 &336244037
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2254,6 +2390,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 315531136}
+  - {fileID: 929855210}
+  - {fileID: 122987335}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2398,7 +2536,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fafdc40bacf38e74dae121147c64e72a, type: 3}
       propertyPath: m_Layer
-      value: 2
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fafdc40bacf38e74dae121147c64e72a, type: 3}
@@ -2559,7 +2697,7 @@ GameObject:
   - component: {fileID: 825272799}
   - component: {fileID: 825272798}
   - component: {fileID: 825272801}
-  m_Layer: 2
+  m_Layer: 12
   m_Name: BinInteractable
   m_TagString: DropOff
   m_Icon: {fileID: 0}
@@ -3116,10 +3254,144 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fafdc40bacf38e74dae121147c64e72a, type: 3}
       propertyPath: m_Layer
-      value: 2
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fafdc40bacf38e74dae121147c64e72a, type: 3}
+--- !u!1 &929855209
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 929855210}
+  - component: {fileID: 929855212}
+  - component: {fileID: 929855211}
+  m_Layer: 5
+  m_Name: TrashScore
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &929855210
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929855209}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 737076982}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -845, y: 438}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &929855211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929855209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'Trash Collected:'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: -129.43893, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &929855212
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929855209}
+  m_CullTransparentMesh: 0
 --- !u!1 &941082256
 GameObject:
   m_ObjectHideFlags: 0
@@ -3132,7 +3404,7 @@ GameObject:
   - component: {fileID: 941082258}
   - component: {fileID: 941082257}
   - component: {fileID: 941082260}
-  m_Layer: 2
+  m_Layer: 12
   m_Name: LaundryInteractable
   m_TagString: DropOff
   m_Icon: {fileID: 0}
@@ -3342,7 +3614,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rubbish: {fileID: 3560212439141523967, guid: 9cc6d9f2301fe2742988001eefc6da88, type: 3}
   AreaScale: 5
-  RubbishAmount: 5
+  RubbishAmount: 10
 --- !u!64 &1022656176
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4771,7 +5043,7 @@ GameObject:
   - component: {fileID: 1637174108}
   - component: {fileID: 1637174107}
   - component: {fileID: 1637174110}
-  m_Layer: 2
+  m_Layer: 12
   m_Name: PaperBinInteractable
   m_TagString: DropOff
   m_Icon: {fileID: 0}
@@ -5194,7 +5466,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1877145286}
   - component: {fileID: 1877145287}
-  m_Layer: 2
+  m_Layer: 12
   m_Name: ArrowAnimation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5849,7 +6121,7 @@ GameObject:
   - component: {fileID: 4000010687502222}
   - component: {fileID: 33000011417150348}
   - component: {fileID: 23000014409106786}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BedBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5883,7 +6155,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000010749285976}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: doors_interact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6128,7 +6400,7 @@ GameObject:
   - component: {fileID: 23000009759944812}
   - component: {fileID: 64000010236528432}
   - component: {fileID: 114000010508705706}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: door03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6180,7 +6452,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000013261505104}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: grp_drawsDoors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6312,7 +6584,7 @@ GameObject:
   - component: {fileID: 4000011800575732}
   - component: {fileID: 65000014104488026}
   - component: {fileID: 114000011277781684}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: door01_interact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6348,7 +6620,7 @@ GameObject:
   - component: {fileID: 23000014734467288}
   - component: {fileID: 64000012184236024}
   - component: {fileID: 114000013944161932}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: door04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6404,7 +6676,7 @@ GameObject:
   - component: {fileID: 23000009474245982}
   - component: {fileID: 64000011608419864}
   - component: {fileID: 114000010347492900}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: draw04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6424,7 +6696,7 @@ GameObject:
   - component: {fileID: 23000011963857298}
   - component: {fileID: 64000012578095286}
   - component: {fileID: 1000010740694257}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PFB_Sofa
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -6580,7 +6852,7 @@ GameObject:
   - component: {fileID: 4000012967405346}
   - component: {fileID: 65000013100041926}
   - component: {fileID: 114000012110743372}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: door04_interact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6598,7 +6870,7 @@ GameObject:
   - component: {fileID: 4000012060031086}
   - component: {fileID: 65000011785117876}
   - component: {fileID: 114000013270390430}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: door05_interact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6618,7 +6890,7 @@ GameObject:
   - component: {fileID: 23000013576378170}
   - component: {fileID: 64000015215606990}
   - component: {fileID: 114000011167162334}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: draw01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6637,7 +6909,7 @@ GameObject:
   - component: {fileID: 65000012511913838}
   - component: {fileID: 95000011105663386}
   - component: {fileID: 114000014417673876}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PFB_KitchenBench
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6657,7 +6929,7 @@ GameObject:
   - component: {fileID: 23000010854090628}
   - component: {fileID: 64000010333226618}
   - component: {fileID: 114000014360145020}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: draw03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6927,7 +7199,7 @@ GameObject:
   - component: {fileID: 33000012681804558}
   - component: {fileID: 23000011900428460}
   - component: {fileID: 64000013673754448}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PFB_DiningChair (2)
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -6945,7 +7217,7 @@ GameObject:
   - component: {fileID: 4000012995836542}
   - component: {fileID: 65000012939113378}
   - component: {fileID: 114000011400923844}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: 'door03_interact '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7036,7 +7308,7 @@ GameObject:
   - component: {fileID: 33000011343927974}
   - component: {fileID: 23000012612074690}
   - component: {fileID: 64000012830864104}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PFB_DiningChair (1)
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -7235,7 +7507,7 @@ GameObject:
   - component: {fileID: 23000011146605376}
   - component: {fileID: 64000014055673420}
   - component: {fileID: 1000012350290801}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PFB_DiningTable
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -7357,7 +7629,7 @@ GameObject:
   - component: {fileID: 33000013565732570}
   - component: {fileID: 23000012688272380}
   - component: {fileID: 64000010614146000}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: KitchenBench_base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7410,7 +7682,7 @@ GameObject:
   - component: {fileID: 4000013316621752}
   - component: {fileID: 65000011941948486}
   - component: {fileID: 114000010472301588}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: door02_interact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7467,7 +7739,7 @@ GameObject:
   - component: {fileID: 23000012008031574}
   - component: {fileID: 64000013963920366}
   - component: {fileID: 114000010929148010}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: draw02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7522,7 +7794,7 @@ GameObject:
   - component: {fileID: 33000011294592788}
   - component: {fileID: 23000011370714990}
   - component: {fileID: 64000013641685896}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PFB_DiningChair (3)
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -7645,7 +7917,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000014168808766}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: doors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7661,7 +7933,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000011892948898}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: draws
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7698,7 +7970,7 @@ GameObject:
   - component: {fileID: 33000012008559632}
   - component: {fileID: 23000012383069102}
   - component: {fileID: 64000011561451334}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PFB_DiningChair
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -7805,7 +8077,7 @@ GameObject:
   - component: {fileID: 23000011882811102}
   - component: {fileID: 64000013156300238}
   - component: {fileID: 114000013377958352}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: door05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7891,7 +8163,7 @@ GameObject:
   - component: {fileID: 23000013614536156}
   - component: {fileID: 64000012051174442}
   - component: {fileID: 114000014037745934}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: door02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8208,7 +8480,7 @@ GameObject:
   - component: {fileID: 23000013209948848}
   - component: {fileID: 64000011310882332}
   - component: {fileID: 1000014115079019}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PFB_SofaSmall
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -8325,7 +8597,7 @@ GameObject:
   - component: {fileID: 23000012579909562}
   - component: {fileID: 64000012345542394}
   - component: {fileID: 114000014371087676}
-  m_Layer: 8
+  m_Layer: 2
   m_Name: door01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15554,8 +15826,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.55, y: 2.45, z: 3.5}
-  m_Center: {x: 0, y: 0.24, z: 0}
+  m_Size: {x: 1.55, y: 2.45, z: 1.8842212}
+  m_Center: {x: 0, y: 0.24, z: 0.8078851}
 --- !u!65 &65000011297760762
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15684,8 +15956,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.29, y: 1, z: 1.18}
-  m_Center: {x: 0, y: 0.63, z: 0.97}
+  m_Size: {x: 4.37325, y: 1, z: 0.90754914}
+  m_Center: {x: -0.0416243, y: 0.63, z: 0.025167616}
 --- !u!65 &65000012939113378
 BoxCollider:
   m_ObjectHideFlags: 0
