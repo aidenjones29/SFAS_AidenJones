@@ -150,7 +150,7 @@ public class PauseMenu : MonoBehaviour
                 PhoneObject.GetComponent<MeshRenderer>().materials = phoneMats;
                 break;
             case phoneMenus.Quit:
-                StartCoroutine(Quit());
+                Application.Quit();
                 break;
         }
     }

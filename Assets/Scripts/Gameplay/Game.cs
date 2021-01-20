@@ -48,6 +48,15 @@ public class Game : MonoBehaviour
             {
                 StartCoroutine("Quit");
             }
+
+            if(_currentBeat.ID == 2 && SceneManager.GetActiveScene().name == "GameEnding")
+            {
+                SceneManager.LoadScene(0);
+            }
+            if (_currentBeat.ID == 3 && SceneManager.GetActiveScene().name == "GameEnding")
+            {
+                Application.Quit();
+            }
         }
     }
 

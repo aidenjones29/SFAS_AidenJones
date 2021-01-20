@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f60cfcc6e08d684a895d3fabab18c15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _data: {fileID: 11400000, guid: 03cbbe32d42b96d45b61c384a692dc19, type: 2}
+  _data: {fileID: 11400000, guid: 66dd7e2b3891b45488bb617b9a9c1fce, type: 2}
   backgroundCamera: {fileID: 1285003684}
   laptopHinge: {fileID: 1493129481}
 --- !u!114 &32768962

@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/MainGame.unity
+    guid: 03aa21a933799af42a3da4f1d27bf7c9
+  - enabled: 1
+    path: Assets/Scenes/HouseClean.unity
+    guid: f2bf691f61901ae41ae6c0a0fb0f1038
+  - enabled: 1
+    path: Assets/Scenes/GameEnding.unity
+    guid: 5b16824aa3c163d4eb2761e1922426e9
   m_configObjects: {}
