@@ -8,6 +8,10 @@ public static class GlobalVariables
 {
     public static bool menuActive;
     public static bool gamePaused;
+    public static bool gameFinished = false;
+
+    public static int trashCollected;
+    public static double timeLeft = 180;
 }
 
 public class PauseMenu : MonoBehaviour

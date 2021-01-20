@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class pickupController : MonoBehaviour
@@ -7,16 +8,24 @@ public class pickupController : MonoBehaviour
     [SerializeField] private GameObject PickupObject;
     [SerializeField] private GameObject BinBagDropOff;
     [SerializeField] private GameObject PaperDropOff;
+    [SerializeField] private GameObject ToiletDropOff;
     [SerializeField] private GameObject SockDropOff;
 
+    [SerializeField] private TMP_Text UItrashPercentage;
+    [SerializeField] private SimpleHealthBar ProgressBar;
+
     private float interactDistance = 100.0f;
+    private int trashCollected = 0;
+
     private bool holdingItem = false;
+
     private string objectHolding = "";
+
 
     // Start is called before the first frame update
     void Start()
     {
-        //layer = LayerMask.NameToLayer("TrashPickup");
+        
     }
 
     // Update is called once per frame
@@ -31,7 +40,6 @@ public class pickupController : MonoBehaviour
 
                 if (Physics.Raycast(forwardRay, out hit, interactDistance))
                 {
-                    Debug.DrawRay(transform.position, transform.forward * 100, Color.green, 5.0f);
                     if (hit.transform.tag == "Pickup")
                     {
                         objectHolding = hit.transform.name;
@@ -44,8 +52,12 @@ public class pickupController : MonoBehaviour
                             case "BinBag":
                                 BinBagDropOff.SetActive(true);
                                 break;
+                            case "Can":
+                                BinBagDropOff.SetActive(true);
+                                break;
                             case "Paper":
                                 PaperDropOff.SetActive(true);
+                                ToiletDropOff.SetActive(true);
                                 break;
                             case "Socks":
                                 SockDropOff.SetActive(true);
@@ -61,10 +73,9 @@ public class pickupController : MonoBehaviour
 
                 if (Physics.Raycast(forwardRay, out hit, interactDistance))
                 {
-                    Debug.DrawRay(transform.position, transform.forward * 100, Color.green, 5.0f);
                     if (hit.transform.tag == "DropOff")
                     {
-                        GameObject childObject = this.gameObject.transform.GetChild(0).GetChild(0).gameObject;
+                        GameObject childObject = this.gameObject.transform.GetChild(0).gameObject;
 
                         switch (objectHolding)
                         {
@@ -73,9 +84,13 @@ public class pickupController : MonoBehaviour
                                 break;
                             case "Paper":
                                 PaperDropOff.SetActive(false);
+                                ToiletDropOff.SetActive(false);
                                 break;
                             case "Socks":
                                 SockDropOff.SetActive(false);
+                                break;
+                            case "Can":
+                                BinBagDropOff.SetActive(false);
                                 break;
                         }
 
@@ -84,10 +99,18 @@ public class pickupController : MonoBehaviour
                             Destroy(child.gameObject);
                         }
                         holdingItem = false;
-                        objectHolding = "";
+                        UpdateUI();
                     }
                 }
             }
         }
+    }
+
+    void UpdateUI()
+    {
+        trashCollected += 2;
+        UItrashPercentage.text = trashCollected.ToString() + "%";
+        ProgressBar.UpdateBar(trashCollected, 100);
+        objectHolding = "";
     }
 }

@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GlobalVariables.menuActive == false)
+        if (!GlobalVariables.menuActive && !GlobalVariables.gameFinished)
         {
             float moveX = Input.GetAxis("Horizontal");
             float moveZ = Input.GetAxis("Vertical");

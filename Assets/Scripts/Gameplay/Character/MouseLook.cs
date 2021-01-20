@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class MouseLook : MonoBehaviour
 {
-    [SerializeField]
-    private float mouseSensitivity = 100.0f;
-
-    [SerializeField]
-    private Transform playerBody;
+    [SerializeField] private float mouseSensitivity = 100.0f;
+    [SerializeField] private Transform playerBody;
 
     private float xRotation = 0.0f;
 
@@ -21,7 +18,7 @@ public class MouseLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GlobalVariables.menuActive == false && GlobalVariables.gamePaused == false)
+        if (!GlobalVariables.menuActive && !GlobalVariables.gamePaused && !GlobalVariables.gameFinished)
         {
             float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
             float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
