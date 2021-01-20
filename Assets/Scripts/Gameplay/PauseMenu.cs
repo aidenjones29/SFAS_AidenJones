@@ -173,9 +173,17 @@ public class PauseMenu : MonoBehaviour
         anim.Play();
         yield return new WaitForSeconds(1);
 
-        if (anim == camAnimation)
-        {
-            SceneManager.LoadSceneAsync("MainGame");
-        }
+       // if (anim == camAnimation)
+       // {
+       //     //StartCoroutine(StartPause());
+       //     //SceneManager.LoadSceneAsync("MainGame");
+       // }
     }
+
+    //IEnumerator StartPause()
+    //{
+    //    unityUI.SetActive(true);
+    //    yield return new WaitForSeconds(1);
+    //    SceneManager.LoadSceneAsync("MainGame");
+    //}
 }

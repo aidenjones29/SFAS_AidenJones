@@ -7,6 +7,7 @@ public class Game : MonoBehaviour
     [SerializeField] private StoryData _data;
     [SerializeField] private GameObject backgroundCamera;
     [SerializeField] private GameObject laptopHinge;
+    [SerializeField] private GameObject unityUI;
 
     private TextDisplay _output;
     private BeatData _currentBeat;
@@ -42,6 +43,7 @@ public class Game : MonoBehaviour
 
             if(_currentBeat.ID == 4)
             {
+                unityUI.SetActive(true);
                 StartCoroutine(AnimPause(camAnimation));
             }
             else if(_currentBeat.ID == 3)
