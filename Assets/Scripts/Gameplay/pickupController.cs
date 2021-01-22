@@ -5,21 +5,24 @@ using UnityEngine;
 
 public class pickupController : MonoBehaviour
 {
+    //--- GameObject setup ---
     [SerializeField] private GameObject PickupObject;
     [SerializeField] private GameObject BinBagDropOff;
     [SerializeField] private GameObject PaperDropOff;
     [SerializeField] private GameObject ToiletDropOff;
     [SerializeField] private GameObject SockDropOff;
 
+    //--- UI values ---
     [SerializeField] private TMP_Text UItrashPercentage;
     [SerializeField] private SimpleHealthBar ProgressBar;
 
-    private float interactDistance = 100.0f;
-    private int trashCollected = 0;
+    //-- Variable setup ---
+    private float interactDistance = 100.0f; //Raycast Distance.
+    private int   trashCollected   = 0;      //Total number of rubish collected.
 
-    private bool holdingItem = false;
-
-    private string objectHolding = "";
+    private bool holdingItem = false;        //Only allow one object to be held at a time.
+     
+    private string objectHolding = "";       //current object holding for activating interaction points.
 
 
     // Start is called before the first frame update
@@ -31,7 +34,7 @@ public class pickupController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E)) //pickup object and activate correct drop off point.
         {
             if(holdingItem == false)
             {
@@ -66,7 +69,7 @@ public class pickupController : MonoBehaviour
                     }
                 }
             }
-            else
+            else //If holding something only collide with drop off point.
             {
                 RaycastHit hit;
                 Ray forwardRay = new Ray(transform.position, transform.forward);

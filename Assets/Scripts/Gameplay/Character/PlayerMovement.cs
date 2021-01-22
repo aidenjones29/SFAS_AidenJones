@@ -67,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator NextLevelLoad()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene("HouseClean");
     }
 }

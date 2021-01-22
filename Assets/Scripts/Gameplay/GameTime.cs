@@ -10,13 +10,13 @@ public class GameTime : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GlobalVariables.timeLeft = 180;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!GlobalVariables.gameFinished)
+        if(!GlobalVariables.gameFinished && GlobalVariables.timeLeft >= 0) //Countdown with UI print off.
         {
             GlobalVariables.timeLeft -= Time.deltaTime;
             UITimeValue.text = GlobalVariables.timeLeft.ToString("F1");

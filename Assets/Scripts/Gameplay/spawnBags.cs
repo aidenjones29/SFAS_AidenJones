@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class spawnBags : MonoBehaviour
 {
-    [SerializeField] private GameObject Rubbish;
+    [SerializeField] private GameObject Rubbish; //Game object to instantiate. will be different each type
 
-    [SerializeField] public float AreaScale;
-    [SerializeField] private int RubbishAmount;
+    [SerializeField] public float AreaScale;     //Due to scaling a square, this will usually be 5.
+    [SerializeField] private int RubbishAmount;  //How many objects to instantiate.
 
     // Start is called before the first frame update
     void Start()
@@ -18,11 +18,11 @@ public class spawnBags : MonoBehaviour
         {
             GameObject rubbishSpawn = Instantiate(Rubbish, gameObject.transform) as GameObject;
             rubbishSpawn.name = rubbishSpawn.name.Replace("(Clone)", "");
-            //GameObject rubbishSpawn = Instantiate(Rubbish, gameObject.transform);
             moveObject(AreaScale, rubbishSpawn);
         }
     }
 
+    //Move the current rubbish around the scale of the spawn area. This can be called again if object colliding with furniture.
     public void moveObject(float areaScale, GameObject rubbish)
     {
         float randomX = Random.Range(-areaScale, areaScale);

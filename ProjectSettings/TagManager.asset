@@ -16,6 +16,7 @@ TagManager:
   - Clothes
   - BinBag
   - DropOff
+  - TimeLeft
   layers:
   - Default
   - TransparentFX

@@ -4,46 +4,48 @@ using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
-public static class GlobalVariables
+public static class GlobalVariables //Global Values for use in other scripts.
 {
     public static bool menuActive;
     public static bool gamePaused;
     public static bool gameFinished = false;
 
-    public static int trashCollected;
-    public static double timeLeft = 180;
+    public static int trashCollected = 0;
+    public static float timeLeft = 180;
 }
 
 public class PauseMenu : MonoBehaviour
 {
-    [SerializeField] private Camera gameCamera;
-    [SerializeField] private Camera laptopCamera;
-    [SerializeField] private GameObject gameUI;
-    [SerializeField] private GameObject backgroundCamera;
-    [SerializeField] private GameObject PhoneThumb;
-    [SerializeField] private GameObject ArmObject;
-    [SerializeField] private GameObject PhoneObject;
-    [SerializeField] private GameObject laptopHinge;
+    //--- Animation Objects ---
+    [SerializeField] private Camera gameCamera;            //Main Game Camera
+    [SerializeField] private Camera laptopCamera;          //The cam to change to when paused.
+    [SerializeField] private GameObject backgroundCamera;  //camera with render texture to laptop screen.
+    [SerializeField] private GameObject PhoneThumb;        //Thumb for phone animation.
+    [SerializeField] private GameObject ArmObject;         
+    [SerializeField] private GameObject PhoneObject;       
+    [SerializeField] private GameObject laptopHinge;       //Laptop empty object for closing laptop.
 
-    [SerializeField] private AnimationClip[] PhoneMovements;
-    [SerializeField] private AnimationClip camMoveAnimOut;
-    [SerializeField] private AnimationClip camMoveAnimIn;
-    
+    //--- UI Objects ---
+    [SerializeField] private GameObject gameUI;
     [SerializeField] private Material[] phoneScreens;
     
-    private enum phoneMenus { Play, Controls, Quit }
-    private phoneMenus currentPhoneSelection = phoneMenus.Play;
-
+    //--- Animation clips ---
+    [SerializeField] private AnimationClip[] PhoneMovements; //Phone animations for transitioning selections.
+    [SerializeField] private AnimationClip camMoveAnimOut;   //Anim clip for moving camera.
+    [SerializeField] private AnimationClip camMoveAnimIn;
     private Animation camAnimation;
     private Animation ThumbAnimation;
     private Animation ArmAnimation;
     private Animation LaptopCloseAnimation;
 
-    private Material[] phoneMats = new Material[7];
+    //--- Variable Setup ---
+    private enum phoneMenus { Play, Controls, Quit }
+    private phoneMenus currentPhoneSelection = phoneMenus.Play;
 
-    private float gameStartedTime = 1.0f;
-    private float gameResumeTime = 1.0f;
-    
+    private Material[] phoneMats = new Material[7]; //List of phone materials for getting screen material.
+
+    private float gameResumeTime = 1.0f; //Timer to allow animation to play.
+
     private bool gameStarted = false;
     private bool phoneActive = true;
     private bool controlsActive = false;
@@ -71,7 +73,7 @@ public class PauseMenu : MonoBehaviour
             gamePause();
         }
 
-        if(gameResumed == true && gameResumeTime <= 0.0f)
+        if(gameResumed == true && gameResumeTime <= 0.0f) //Resume game after animation has played.
         {
             gameCamera.enabled = true;
             laptopCamera.enabled = false;
@@ -84,7 +86,7 @@ public class PauseMenu : MonoBehaviour
             gameResumeTime -= Time.deltaTime;
         }
 
-        if (phoneActive == true)
+        if (phoneActive == true) //Pause all gameplay when the pause screen is active (Phone up)
         {
             if (Input.GetKeyDown(KeyCode.DownArrow))
             {
@@ -172,18 +174,5 @@ public class PauseMenu : MonoBehaviour
     {
         anim.Play();
         yield return new WaitForSeconds(1);
-
-       // if (anim == camAnimation)
-       // {
-       //     //StartCoroutine(StartPause());
-       //     //SceneManager.LoadSceneAsync("MainGame");
-       // }
     }
-
-    //IEnumerator StartPause()
-    //{
-    //    unityUI.SetActive(true);
-    //    yield return new WaitForSeconds(1);
-    //    SceneManager.LoadSceneAsync("MainGame");
-    //}
 }

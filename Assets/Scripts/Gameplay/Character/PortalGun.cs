@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class PortalGun : MonoBehaviour
 {
-    [SerializeField] private GameObject crosshair;
-    [SerializeField] private GameObject[] portalObjects;
-    [SerializeField] private AudioClip portalSound;
+    [SerializeField] private GameObject   crosshair;     //UI icon
+    [SerializeField] private GameObject[] portalObjects; //Two Prefabs for portals.
+    [SerializeField] private AudioClip    portalSound;   //Firing portal sound.
 
-    private enum portalDirection {eDown = 0, eLeft = -90, eUp = 180, eRight = 90};
-    private enum Portals { Green, Red };
+    private enum portalDirection {eDown = 0, eLeft = -90, eUp = 180, eRight = 90}; //Portal Rotations.
+    private portalDirection currentPortalDirection; 
 
-    private portalDirection currentPortalDirection;
+    private enum Portals { Green, Red }; //PortalSelection/CurrentPortal
     private Portals currentPortal;
 
     // Start is called before the first frame update
@@ -24,12 +24,12 @@ public class PortalGun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.R))
+        if(Input.GetKeyDown(KeyCode.R)) //Rotate Portal direction
         {
             rotatePortalDirection();
         }
 
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0)) //Fire Portal Ray
         {
             RaycastHit hit;
             Ray forwardRay = new Ray(transform.position, transform.forward);
@@ -47,6 +47,7 @@ public class PortalGun : MonoBehaviour
                     float currentRotation = (int)currentPortalDirection + (Mathf.Round(transform.eulerAngles.z));
                     portalObjects[(int)currentPortal].transform.Rotate(gameObject.transform.rotation.x + 90.0f, gameObject.transform.rotation.y, gameObject.transform.rotation.z + (int)currentPortalDirection);
 
+                    //Toggle Portal selection
                     if (currentPortal == Portals.Green) currentPortal = Portals.Red;
                     else if (currentPortal == Portals.Red) currentPortal = Portals.Green;
                 }
